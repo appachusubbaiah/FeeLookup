@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts  
+Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">  
+<struts>  
+<package name="feelookup" namespace= "/"  extends="struts-default,json-default">  
+  <result-types>
+        <result-type name="json" class="com.googlecode.jsonplugin.JSONResult"/>
+    </result-types>
+    <default-action-ref name = "feelookup"></default-action-ref>
+		<action name="feelookup" >  
+			<result>/FeeLookup.jsp</result>  
+		</action>  
+		<action name="lookupapi" class = "com.ocwen.FeeLookupAction">
+			<result type="json" />  
+		</action>    
+		
+		
+</package>
+
+
+</struts>   
